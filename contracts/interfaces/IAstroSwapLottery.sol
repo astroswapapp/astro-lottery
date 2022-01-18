@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-interface IWagyuSwapLottery {
+interface IAstroSwapLottery {
     /**
      * @notice Buy tickets for the current lottery
      * @param _lotteryId: lotteryId

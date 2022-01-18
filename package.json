@@ -1,5 +1,5 @@
 {
-  "name": "wagyu-lottery-contracts",
+  "name": "astro-lottery-contracts",
   "version": "1.0.0",
   "dependencies": {
     "@openzeppelin/contracts": "^4.1.0",

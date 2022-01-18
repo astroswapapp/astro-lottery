@@ -30,18 +30,18 @@ async function main(): Promise<void> {
 
   await waitSeconds(10);
 
-  const WagyuSwapLottery: ContractFactory = await ethers.getContractFactory("WagyuSwapLottery");
-  const wagyuSwapLottery: Contract = await WagyuSwapLottery.deploy(params.wag, randomNumberGenerator.address);
-  await wagyuSwapLottery.deployed();
+  const AstroSwapLottery: ContractFactory = await ethers.getContractFactory("AstroSwapLottery");
+  const astroSwapLottery: Contract = await AstroSwapLottery.deploy(params.astro, randomNumberGenerator.address);
+  await astroSwapLottery.deployed();
 
-  console.log("WagyuSwapLottery deployed to:", wagyuSwapLottery.address);
+  console.log("AstroSwapLottery deployed to:", astroSwapLottery.address);
 
-  await randomNumberGenerator.setLotteryAddress(wagyuSwapLottery.address);
+  await randomNumberGenerator.setLotteryAddress(astroSwapLottery.address);
 
-  await wagyuSwapLottery.setOperatorAndTreasuryAndInjectorAddresses(params.operator, params.treasury, params.injector);
-  console.log("WagyuSwapLottery operator is set to", params.operator);
-  console.log("WagyuSwapLottery treasury is set to", params.treasury);
-  console.log("WagyuSwapLottery injector is set to", params.injector);
+  await astroSwapLottery.setOperatorAndTreasuryAndInjectorAddresses(params.operator, params.treasury, params.injector);
+  console.log("AstroSwapLottery operator is set to", params.operator);
+  console.log("AstroSwapLottery treasury is set to", params.treasury);
+  console.log("AstroSwapLottery injector is set to", params.injector);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
